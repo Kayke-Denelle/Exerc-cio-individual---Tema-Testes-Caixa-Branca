@@ -5,9 +5,7 @@ Este documento descreve os pontos do fluxo de controle, calcula a complexidade c
 
 ---
 
----
-
-## Descrição dos Pontos
+## Nós encontrados no código
 
 1. **N1**: Início do método `conectarBD`.
 2. **N2**: Declaração e inicialização do objeto `Connection` como `null`.
@@ -32,17 +30,7 @@ Este documento descreve os pontos do fluxo de controle, calcula a complexidade c
 
 ---
 
-## Complexidade Ciclomática
-
-A complexidade ciclomática é calculada pela fórmula:
-\`\`\`
-M = E - N + 2P
-\`\`\`
-- **E**: Número de arestas no grafo de fluxo.
-- **N**: Número de nós no grafo.
-- **P**: Número de componentes conectados (neste caso, 1).
-
-### Cálculo
+### Cálculo Complexidade Ciclomática
 - Número de nós (N): 17.
 - Número de arestas (E): 19 (com base nas conexões observadas).
 - Componentes conectados (P): 1.
