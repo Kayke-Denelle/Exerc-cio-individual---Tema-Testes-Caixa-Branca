@@ -1,51 +1,67 @@
-# Fluxo do Código e Análise de Complexidade
 
-Este documento detalha a análise de fluxo do código, calculando a complexidade ciclomática e descrevendo todos os caminhos possíveis.
+# Análise do Fluxo de Controle - Etapa 3
 
-## **Grafo de Fluxo**
+Este documento descreve os pontos do fluxo de controle, calcula a complexidade ciclomática e apresenta os caminhos possíveis do código analisado.
 
-O grafo de fluxo do código é composto pelos seguintes pontos principais e suas interações:
+---
 
-1. **Início**
-2. **Método `conectarBD()`**
-3. **Classe `Class.forName("com.mysql.Driver").newInstance()`**
-4. **URL de conexão**
-5. **`conn = DriverManager.getConnection(url)`**
-6. **Exceção capturada**
-7. **Retorno de `conn`**
-8. **Método `verificarUsuario()`**
-9. **Chamada ao método `conectarBD()`**
-10. **Construção da consulta SQL**
-11. **Criação do `Statement`**
-12. **Execução do SQL com `st.executeQuery()`**
-13. **`if (rs.next())` - Verificação de resultados**
-14. **`result = true` - Usuário válido**
-15. **`nome = rs.getString("nome")` - Armazenamento do nome**
-16. **Exceção capturada (dentro de `verificarUsuario()`)**
-17. **Retorno de `result`**
+---
 
-## **Cálculo da Complexidade Ciclomática**
+## Descrição dos Pontos
 
-A complexidade ciclomática é uma métrica que mede o número de caminhos independentes em um programa. O cálculo para o código é:
+1. **N1**: Início do método `conectarBD`.
+2. **N2**: Declaração e inicialização do objeto `Connection` como `null`.
+3. **N3**: Entrada no bloco `try`.
+4. **N4**: Carregamento do driver MySQL com `Class.forName`.
+5. **N5**: Configuração da URL de conexão com os dados do banco.
+6. **N6**: Estabelecimento da conexão com o banco através de `DriverManager.getConnection`.
+7. **N7**: Entrada no bloco `catch` em caso de exceção.
+8. **N8**: Retorno do objeto de conexão, seja válido ou `null`.
+9. **N9**: Início do método `verificarUsuario`.
+10. **N10**: Declaração da consulta SQL e chamada ao método `conectarBD`.
+11. **N11**: Construção da consulta SQL dinâmica com os parâmetros `login` e `senha`.
+12. **N12**: Entrada no bloco `try`.
+13. **N13**: Execução da consulta SQL e armazenamento dos resultados.
+14. **N14**: Verificação condicional (`if`) para checar se existem resultados.
+15. **N15**: Atribuição de valores às variáveis `result` e `nome` caso o resultado seja encontrado.
+16. **N16**: Entrada no bloco `catch` em caso de exceção.
+17. **N17**: Retorno do resultado:
+    - Falha (quando a conexão falha ou ocorre exceção).
+    - Sem resultados (quando não há correspondência).
+    - Sucesso (quando há correspondência).
 
-\[
-V(G) = 18 - 17 + 2(1) = 3
-\]
+---
 
-Portanto, a **complexidade ciclomática** do código é **3**.
+## Complexidade Ciclomática
 
-## **Sequências de Caminhos**
+A complexidade ciclomática é calculada pela fórmula:
+\`\`\`
+M = E - N + 2P
+\`\`\`
+- **E**: Número de arestas no grafo de fluxo.
+- **N**: Número de nós no grafo.
+- **P**: Número de componentes conectados (neste caso, 1).
 
-Os caminhos possíveis para execução do código são:
+### Cálculo
+- Número de nós (N): 17.
+- Número de arestas (E): 19 (com base nas conexões observadas).
+- Componentes conectados (P): 1.
 
-1. **Caminho 1**: 
-   - Início → Método `conectarBD()` → `conn = DriverManager.getConnection(url)` → Retorno de `conn`
-   - Início → Método `verificarUsuario()` → Chamada ao método `conectarBD()` → Criação do `Statement` → Execução do SQL → `if (rs.next())` → `result = true` → `nome = rs.getString("nome")` → Retorno de `result`
+\`\`\`
+M = 19 - 17 + 2 * 1 = 4
+\`\`\`
 
-2. **Caminho 2**: 
-   - Início → Método `conectarBD()` → Exceção capturada → Retorno de `conn`
-   - Início → Método `verificarUsuario()` → Chamada ao método `conectarBD()` → Exceção capturada → Retorno de `result`
+A complexidade ciclomática é **4**, indicando que o código possui 4 caminhos independentes.
 
-3. **Caminho 3**: 
-   - Início → Método `conectarBD()` → `conn = DriverManager.getConnection(url)` → Retorno de `conn`
-   - Início → Método `verificarUsuario()` → Chamada ao método `conectarBD()` → Criação do `Statement` → Execução do SQL → `if (rs.next())` → Exceção capturada → Retorno de `result`
+---
+
+## Caminhos Identificados
+
+Caminho 1: N1 → N2 → N3 → N7 → N8.(erro de conexão, exceção tratada).
+Caminho 2: N1 → N2 → N3 → N4 → N5 → N6 → N8 → N9 → N10 → N11 → N12 → N13 → N14 → N15 → N17 (sucesso).
+Caminho 3: N1 → N2 → N3 → N4 → N5 → N6 → N8 → N9 → N10 → N11 → N12 → N13 → N14 → N17 (sem resultados).
+Caminho 4: N1 → N2 → N3 → N4 → N5 → N6 → N8 → N9 → N10 → N11 → N12 → N16 → N17 (falha).
+
+
+---
+
