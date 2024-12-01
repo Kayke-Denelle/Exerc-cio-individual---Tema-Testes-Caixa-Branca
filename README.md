@@ -23,14 +23,13 @@ O grafo de fluxo do código é composto pelos seguintes pontos principais e suas
 15. **`nome = rs.getString("nome")` - Armazenamento do nome**
 16. **Exceção capturada (dentro de `verificarUsuario()`)**
 17. **Retorno de `result`**
-18. **Fim**
 
 ## **Cálculo da Complexidade Ciclomática**
 
 A complexidade ciclomática é uma métrica que mede o número de caminhos independentes em um programa. O cálculo para o código é:
 
 \[
-V(G) = 19 - 18 + 2(1) = 3
+V(G) = 18 - 17 + 2(1) = 3
 \]
 
 Portanto, a **complexidade ciclomática** do código é **3**.
