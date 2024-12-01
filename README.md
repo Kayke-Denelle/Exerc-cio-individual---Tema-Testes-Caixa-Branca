@@ -8,6 +8,6 @@ Erros que podem causar problemas no codígo:
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-3- 1- No método verificarUsuario(), a exceção é colocada, porém não á um tratamento do erro que pode acontecer. Isso faz com que, se algo der errado, não seja possível saber o motivo, dificultando descobrir e resolver o problema.
+3- No método verificarUsuario(), a exceção é colocada, porém não á um tratamento do erro que pode acontecer. Isso faz com que, se algo der errado, não seja possível saber o motivo, dificultando descobrir e resolver o problema.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
