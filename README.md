@@ -58,8 +58,11 @@ A complexidade ciclomática é **4**, indicando que o código possui 4 caminhos 
 ## Caminhos Identificados
 
 Caminho 1: N1 → N2 → N3 → N7 → N8.(erro de conexão, exceção tratada).
+
 Caminho 2: N1 → N2 → N3 → N4 → N5 → N6 → N8 → N9 → N10 → N11 → N12 → N13 → N14 → N15 → N17 (sucesso).
+
 Caminho 3: N1 → N2 → N3 → N4 → N5 → N6 → N8 → N9 → N10 → N11 → N12 → N13 → N14 → N17 (sem resultados).
+
 Caminho 4: N1 → N2 → N3 → N4 → N5 → N6 → N8 → N9 → N10 → N11 → N12 → N16 → N17 (falha).
 
 
