@@ -1,27 +1,0 @@
-[34m2024-10-30 11:13:04[39m [32m[DEBUG][39m Resource server started on port 8828
-[34m2024-10-30 11:13:38[39m [32m[DEBUG][39m Creating MySQL connection for 1730297618620
-[34m2024-10-30 11:13:38[39m [32m[DEBUG][39m Closing connection 1730297618620
-[34m2024-10-30 11:14:12[39m [32m[DEBUG][39m Creating MySQL connection for 1730297652245
-[34m2024-10-30 11:14:12[39m [32m[DEBUG][39m Closing connection 1730297652245
-[34m2024-10-30 11:14:15[39m [32m[DEBUG][39m Creating MySQL connection for 1730297655930
-[34m2024-10-30 11:14:15[39m [32m[DEBUG][39m Closing connection 1730297655930
-[34m2024-10-30 11:20:17[39m [32m[DEBUG][39m Creating MySQL connection for 1730298017934
-[34m2024-10-30 11:20:17[39m [32m[DEBUG][39m Closing connection 1730298017934
-[34m2024-10-30 11:20:25[39m [32m[DEBUG][39m Creating MySQL connection for 1730298025553
-[34m2024-10-30 11:20:25[39m [32m[DEBUG][39m Closing connection 1730298025553
-[34m2024-10-30 11:21:21[39m [32m[DEBUG][39m Creating MySQL connection for 1730298081745
-[34m2024-10-30 11:21:21[39m [32m[DEBUG][39m Closing connection 1730298081745
-[34m2024-10-30 12:34:45[39m [32m[DEBUG][39m Resource server started on port 8828
-[34m2024-10-30 12:35:03[39m [32m[DEBUG][39m Resource server started on port 8828
-[34m2024-10-30 19:00:42[39m [32m[DEBUG][39m Resource server started on port 8828
-[34m2024-11-01 13:37:39[39m [32m[DEBUG][39m Resource server started on port 8828
-[34m2024-11-01 13:39:25[39m [32m[DEBUG][39m Resource server started on port 8828
-[34m2024-11-01 15:38:47[39m [32m[DEBUG][39m Resource server started on port 8828
-[34m2024-11-04 11:37:58[39m [32m[DEBUG][39m Resource server started on port 8828
-[34m2024-11-04 11:42:57[39m [32m[DEBUG][39m Resource server started on port 8829
-[34m2024-11-04 11:43:11[39m [32m[DEBUG][39m Resource server started on port 8829
-[34m2024-11-04 13:53:03[39m [32m[DEBUG][39m Resource server started on port 8828
-[34m2024-11-04 13:53:09[39m [32m[DEBUG][39m Resource server started on port 8828
-[34m2024-11-04 13:56:38[39m [32m[DEBUG][39m Resource server started on port 8829
-[34m2024-11-04 13:56:59[39m [32m[DEBUG][39m Resource server started on port 8829
-
